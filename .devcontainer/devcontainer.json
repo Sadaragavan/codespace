@@ -1,0 +1,26 @@
+{
+  "name": "Clean Pro Workspace",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postCreateCommand": "echo 'export PS1=\"\\W > \"' >> ~/.bashrc",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.colorTheme": "GitHub Dark Default",
+        "editor.fontFamily": "Monaco, 'Courier New', monospace",
+        "terminal.integrated.fontFamily": "Monaco, 'Courier New', monospace",
+        "editor.minimap.enabled": false,
+        "window.commandCenter": false,
+        "workbench.layoutControl.enabled": false,
+        "chat.commandCenter.enabled": false,
+        "github.copilot.enable": { "*": false },
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "dsznajder.es7-react-js-snippets"
+      ]
+    }
+  }
+}
