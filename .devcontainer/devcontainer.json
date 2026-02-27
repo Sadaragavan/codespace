@@ -1,6 +1,14 @@
 {
-  "name": "Clean Pro Workspace",
+  "name": "Expert All-Rounder Workspace",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
+  },
   "postCreateCommand": "echo 'export PS1=\"\\W > \"' >> ~/.bashrc",
   "customizations": {
     "vscode": {
@@ -13,13 +21,35 @@
         "workbench.layoutControl.enabled": false,
         "chat.commandCenter.enabled": false,
         "github.copilot.enable": { "*": false },
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "python.analysis.diagnosticMode": "openFilesOnly",
+        "python.analysis.typeCheckingMode": "basic",
+        "[python]": {
+          "editor.defaultFormatter": "charliermarsh.ruff"
+        }
       },
       "extensions": [
         "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "dsznajder.es7-react-js-snippets"
+        "dsznajder.es7-react-js-snippets",
+        "christian-kohler.path-intellisense",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "ms-vscode.hexeditor",
+        "cyrusfirheir.twee3-language-tools",
+        "chrmarti.regex",
+        "ritwickdey.LiveServer",
+        "ecmel.vscode-html-css",
+        "bradlc.vscode-tailwindcss",
+        "humao.rest-client",
+        "mikestead.dotenv",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-sqlite"
       ]
     }
   }
